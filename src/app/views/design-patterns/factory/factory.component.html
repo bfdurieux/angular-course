@@ -1,0 +1,24 @@
+<div class="box">
+  <h1 class="title">Factory</h1>
+  <div class="block">
+    <div class="control">
+      <label class="radio">
+        <input type="radio" name="answer" value="cheese" [(ngModel)]="selectedType">
+        Cheese
+      </label>
+      <label class="radio">
+        <input type="radio" name="answer" value="pepperoni" [(ngModel)]="selectedType">
+        Pepperoni
+      </label>
+    </div>
+
+    <div class="row">
+      <button class="button is-primary create-button" (click)="receiveOrderNY()">Order from NY Store</button>
+      <button class="button is-primary" (click)="receiveOrderChicago()">Order from Chicago Store</button>
+    </div>
+
+  </div>
+  <div class="block">
+    {{result}}
+  </div>
+</div>

@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-course';
+  activeTab: string = 'home';
+
+  setActiveTab(tabName: string){
+    this.activeTab = tabName;
+  }
 }

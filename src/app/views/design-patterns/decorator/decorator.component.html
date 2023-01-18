@@ -1,0 +1,61 @@
+<div class="row">
+
+  <div class="container beverages">
+    <div class="dropdown" [ngClass]="{'is-active': beverageActive}">
+      <div class="dropdown-trigger">
+        <button class="button" (click)="beverageActive = !beverageActive" aria-haspopup="true" aria-controls="dropdown-menu">
+          <span>Beverages</span>
+          <span class="icon is-small">
+            <i class="fas fa-angle-down" aria-hidden="true"></i>
+          </span>
+        </button>
+      </div>
+      <div class="dropdown-menu" id="dropdown-menu" role="menu">
+        <div class="dropdown-content">
+          <a (click)="setEspresso()" class="dropdown-item">
+            Espresso
+          </a>
+          <a (click)="setHouseBlend()" class="dropdown-item">
+            House Blend
+          </a>
+          </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="dropdown" [ngClass]="{'is-active': condimentActive}">
+      <div class="dropdown-trigger">
+        <button class="button" (click)="condimentActive = !condimentActive" aria-haspopup="true" aria-controls="dropdown-menu">
+          <span>Condiments</span>
+          <span class="icon is-small">
+            <i class="fas fa-angle-down" aria-hidden="true"></i>
+          </span>
+        </button>
+      </div>
+      <div class="dropdown-menu" id="dropdown-menu-condiments" role="menu">
+        <div class="dropdown-content">
+          <a (click)="setMocha()" class="dropdown-item">
+            mocha
+          </a>
+          <a (click)="setNone()" class="dropdown-item">
+            None
+          </a>
+          </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<button (click)="calculate()" class="button is-primary is-outlined">Calculate</button>
+
+<div class="box">
+  <div class="content">
+    <h2>Beverage: {{beverage?.description}}</h2>
+    <h2>Condiment: {{condiment?.description}}</h2>
+
+    <h1>Total</h1>
+    <span>{{total}}</span>
+    <h2>Description</h2>
+    <span>{{description}}</span>
+  </div>
+</div>

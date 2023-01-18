@@ -1,0 +1,23 @@
+<div class="columns is-centered">
+  <div class="column is-one-third">
+    <div class="box">
+      <h1 class="title">Typing Challenge</h1>
+      <div class="box">
+        <span [class]="compare(letter, inputValue[i])"
+              *ngFor="let letter of randomMessage.split('');
+              let i = index">{{letter}}</span>
+      </div>
+      <div class="field">
+        <label class="label">Input text:</label>
+        <div class="control">
+          <input class="input" (input)="inputChange($event)">
+        </div>
+      </div>
+      <!-- success message -->
+      <div *ngIf="showSuccess" class="notification is-success">
+        <button class="delete" (click)="showSuccess = false"></button>
+        Success!
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,9 @@
+.row {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 50px;
+}
+
+.beverages {
+  width: 0;
+}

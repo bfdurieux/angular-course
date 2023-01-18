@@ -1,0 +1,15 @@
+.modal {
+  max-height: 300px;
+}
+
+.actions:empty {
+  display: none;
+}
+
+.actions-default {
+  display: none;
+}
+
+.actions:empty +.actions-default {
+  display: block;
+}
